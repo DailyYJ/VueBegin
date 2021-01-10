@@ -1,13 +1,16 @@
+<!-- NavBar (Vue 홈페이지 참고) -->
 <template>
 <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand href="/">NavBar</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
+        <b-nav-item href="todoMain">TodoMain</b-nav-item>
+        <b-nav-item href="testing">Testing</b-nav-item>
+        <b-nav-item href="about">About</b-nav-item>
         <b-nav-item href="#" disabled>Disabled</b-nav-item>
       </b-navbar-nav>
 
@@ -19,6 +22,7 @@
         </b-nav-form>
 
         <b-nav-item-dropdown text="Lang" right>
+          <b-dropdown-item href="#">KO</b-dropdown-item>
           <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>

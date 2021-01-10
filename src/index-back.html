@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Vue Sample</title>
+</head>
+
+<body>
+    <div id="app">
+        <child-component v-bind:propsdata="message"></child-component>
+        <sbling-component v-bind:propsdata="anothermessage"></sbling-component>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+
+
+        Vue.component('sbling-component', {
+            props: ['propsdata'],
+            template: '<p>{{propsdata}}</p>'
+        })   
+
+        Vue.component('child-component', {
+               props: ['propsdata'],
+               template: '<p>{{propsdata}}</p>'
+            })   
+
+        // var cmp = {
+        //     template: '<p>This is local blah</p>'
+        // };
+
+        var app = new Vue({
+            el: '#app',
+            components: {
+                message: "Hello Vue!",
+                anothermessage: "Hello Another Messgae"
+            }
+        });
+    </script>
+</body>
+
+</html>
